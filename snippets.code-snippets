@@ -71,34 +71,6 @@
         ],
         "description": "Get Globals Instance"
     },
-    "Create TextBuilder Object": {
-        "prefix": "TextBuilder",
-        "body": [
-            "TextBuilder(${1:text})"
-        ],
-        "description": "Create TextBuilder Object"
-    },
-    "Create BooleanBuilder Object": {
-        "prefix": "BooleanBuilder",
-        "body": [
-            "BooleanBuilder(${1:boolean})"
-        ],
-        "description": "Create BooleanBuilder Object"
-    },
-    "Create NumberBuilder Object": {
-        "prefix": "NumberBuilder",
-        "body": [
-            "NumberBuilder(${1:number})"
-        ],
-        "description": "Create NumberBuilder Object"
-    },
-    "Create ComboBuilder Object": {
-        "prefix": "ComboBuilder",
-        "body": [
-            "ComboBuilder(${1:text})"
-        ],
-        "description": "Create ComboBuilder Object"
-    },
     "Unload Current Script": {
         "prefix": "this:unload",
         "body": [
@@ -282,6 +254,12 @@
         "prefix": "globals:setTickMultiplier",
         "body": "globals:setTickMultiplier(${1:ticks})"
     },
+    "Get Block By Coords": {
+        "prefix": "globals:getBlock",
+        "body": [
+            "globals:getBlock(${1:x}, ${2:y}, ${3:z})"
+        ]
+    },
     "Get Entity List": {
         "prefix": ["mc.world:getEntities", "globals:getEntities"],
         "body": "globals:getEntities()"
@@ -319,19 +297,19 @@
             "renderer:textWithShadow(${1:stack}, textOf(\"${2:text}\"), vec2d(${3:x}, ${4:y}), ${5:color})"
         ]
     },
-    "Draw Outlined Rect": {
+    "Draw Outlined Rectangle": {
         "prefix": "renderer:rect",
         "body": [
             "renderer:rect(${1:stack}, ${2:from}, ${3:to}, ${4:color})"
         ]
     },
-    "Draw Filled Rect": {
+    "Draw Filled Rectangle": {
         "prefix": "renderer:rectFilled",
         "body": [
             "renderer:rectFilled(${1:stack}, ${2:from}, ${3:to}, ${4:color})"
         ]
     },
-    "Draw Filled Rect with Fade": {
+    "Draw Filled Rectangle with Fade": {
         "prefix": "renderer:rectFilledFade",
         "body": [
             "renderer:rectFilled(${1:stack}, ${2:from}, ${3:to}, ${4:color1}, ${5:color2})"
@@ -389,6 +367,98 @@
         "prefix": "renderer:drawBox",
         "body": [
             "renderer:drawBox(${1:stack}, ${2:bp}, ${3:color}, ${4:lineWidth})"
+        ]
+    },
+    "Draw Semi 2d Rectangle": {
+        "prefix": "renderer:drawSemi2dRect",
+        "body": [
+            "renderer:drawSemi2dRect(${1:vec3d}, ${2:offset1}, ${3:offset2}, ${4:scale}, ${5:color})"
+        ]
+    },
+    "Draw Semi 2d Text": {
+        "prefix": "renderer:drawSemi2dText",
+        "body": [
+            "renderer:drawSemi2dRect(${1:text}, ${2:vec3d}, ${3:offset1}, ${4:offset2}, ${5:scale}, ${6:color}, ${7:shadow})"
+        ]
+    },
+    "Setup GL": {
+        "prefix": "renderer:setup()",
+        "body": "renderer:setup()"
+    },
+    "Setup GL 3D": {
+        "prefix": "renderer:setup3D()",
+        "body": "renderer:setup3D()"
+    },
+    "Clean GL": {
+        "prefix": "renderer:clean()",
+        "body": "renderer:clean()"
+    },
+    "Clean GL 3D": {
+        "prefix": "renderer:clean3D()",
+        "body": "renderer:clean3D()"
+    },
+    "Get Value of Option": {
+        "prefix": ["setting:getValue", "option:getValue"],
+        "body": "${1:option}:getValue()"
+    },
+    "Set Option Value": {
+        "prefix": ["setting:setValue", "option:gesetValue"],
+        "body": "${1:option}:setValue(${2:value})"
+    },
+    "Set Option Value (string)": {
+        "prefix": ["setting:setStringValue", "option:gesetStringValue"],
+        "body": "${1:option}:setStringValue(${2:value})"
+    },
+    "Create TextBuilder Object": {
+        "prefix": "TextBuilder",
+        "body": [
+            "TextBuilder(${1:text})"
+        ],
+        "description": "Create TextBuilder Object"
+    },
+    "Create BooleanBuilder Object": {
+        "prefix": "BooleanBuilder",
+        "body": [
+            "BooleanBuilder(${1:boolean})"
+        ],
+        "description": "Create BooleanBuilder Object"
+    },
+    "Create NumberBuilder Object": {
+        "prefix": "NumberBuilder",
+        "body": [
+            "NumberBuilder(${1:number})"
+        ],
+        "description": "Create NumberBuilder Object"
+    },
+    "Create ComboBuilder Object": {
+        "prefix": "ComboBuilder",
+        "body": [
+            "ComboBuilder(${1:text})"
+        ],
+        "description": "Create ComboBuilder Object"
+    },
+    "Create Lazy TextBuilder Object": {
+        "prefix": ["LazyTextBuilder", "lTextBuilder", "TextBuilderLazy"],
+        "body": [
+            "local ${1:name} = TextBuilder(${2:value}):name(${1:name}):build(${3:feature})"
+        ]
+    },
+    "Create Lazy BooleanBuilder Object": {
+        "prefix": ["LazyBooleanBuilder", "lBooleanBuilder", "BooleanBuilderLazy"],
+        "body": [
+            "local ${1:name} = BooleanBuilder(${2:value}):name(${1:name}):build(${3:feature})"
+        ]
+    },
+    "Create Lazy NumberBuilder Object": {
+        "prefix": ["LazyNumberBuilder", "lNumberBuilder", "NumberBuilderLazy"],
+        "body": [
+            "local ${1:name} = NumberBuilder(${2:value}):name(${1:name}):setBounds(${3:min}, ${4:max}):build(${5:feature})"
+        ]
+    },
+    "Create Lazy ComboBuilder Object": {
+        "prefix": ["LazyComboBuilder", "lComboBuilder", "ComboBuilderLazy"],
+        "body": [
+            "local ${1:name} = ComboBuilder(${2:value}):name(${1:name}):setCombo(${3:values}):build(${4:feature})"
         ]
     }
 
