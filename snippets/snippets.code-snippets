@@ -1,0 +1,395 @@
+{
+    "Create Empty Main Method": {
+        "prefix": ["fm", "fmain"],
+        "body": [
+            "function main()",
+            "   ${0}",
+            "end"
+        ],
+        "description": "Create Empty Main Method"
+    },
+    "Get Minecraft Instacne": {
+        "prefix": "mc",
+        "body": [
+            "mc"
+        ],
+        "description": "Get Minecraft Instance"
+    },
+    "Get Current Script Instance": {
+        "prefix": "this",
+        "body": [
+            "this"
+        ],
+        "description": "Get Current Script Instance"
+    },
+    "Create Text Object": {
+        "prefix": "textOf",
+        "body": [
+            "textOf(${1:text})"
+        ],
+        "description": "Create Text Object"
+    },
+    "Create Vec2d Object": {
+        "prefix": "vec2d",
+        "body": [
+            "vec2d(${1:x}, ${2:y})"
+        ],
+        "description": "Create Vec2d Object"
+    },
+    "Create Vec3d Object": {
+        "prefix": "vec3d",
+        "body": [
+            "vec3d(${1:x}, ${2:y}, ${3:x})"
+        ],
+        "description": "Create Vec3d Object"
+    },
+    "Create Color Object": {
+        "prefix": "color",
+        "body": [
+            "color(${1:red}, ${2:green}, ${3:blue}, ${4:alpha})"
+        ],
+        "description": "Create Color Object"
+    },
+    "Get Client Instance": {
+        "prefix": "client",
+        "body": [
+            "client"
+        ],
+        "description": "Get Client Instance"
+    },
+    "Get Render Engine Instance": {
+        "prefix": "renderer",
+        "body": [
+            "renderer"
+        ],
+        "description": "Get Render Engine Instance"
+    },
+    "Get Globals Instance": {
+        "prefix": "globals",
+        "body": [
+            "globals"
+        ],
+        "description": "Get Globals Instance"
+    },
+    "Create TextBuilder Object": {
+        "prefix": "TextBuilder",
+        "body": [
+            "TextBuilder(${1:text})"
+        ],
+        "description": "Create TextBuilder Object"
+    },
+    "Create BooleanBuilder Object": {
+        "prefix": "BooleanBuilder",
+        "body": [
+            "BooleanBuilder(${1:boolean})"
+        ],
+        "description": "Create BooleanBuilder Object"
+    },
+    "Create NumberBuilder Object": {
+        "prefix": "NumberBuilder",
+        "body": [
+            "NumberBuilder(${1:number})"
+        ],
+        "description": "Create NumberBuilder Object"
+    },
+    "Create ComboBuilder Object": {
+        "prefix": "ComboBuilder",
+        "body": [
+            "ComboBuilder(${1:text})"
+        ],
+        "description": "Create ComboBuilder Object"
+    },
+    "Unload Current Script": {
+        "prefix": "this:unload",
+        "body": [
+            "this:unload(${1:remove})"
+        ],
+        "description": "Unload Current Script"
+    },
+    "Reload Current Script": {
+        "prefix": "this:reload",
+        "body": [
+            "this:reload()"
+        ],
+        "description": "Reload Current Script"
+    },
+    "Register Callback to Current Script": {
+        "prefix": "this:registerCallback",
+        "body": [
+            "this:registerCallback(${1:callbackname}, ${2:fn})"
+        ],
+        "description": "Register Callback to Current Script"
+    },
+    "Get Event Name": {
+        "prefix": "event:getName",
+        "body": [
+            "event:getName()"
+        ],
+        "description": "Get Event Name"
+    },
+    "Create new Module Object": {
+        "prefix": "Module.new",
+        "body": [
+            "Module.new(${1:modulename}, ${2:description}, ${3:category}, this)"
+        ],
+        "description": "Create New Module Object"
+    },
+    "Create new Module Object With Body": {
+        "prefix": "Module.newb",
+        "body": [
+            "local ${1:modulename} = Module.new(\"${1:modulename}\", ${2:description}, ${3:category}, this)",
+            "${1:modulename}:body(function()",
+            "   ${0}",
+            "end)"
+        ],
+        "description": "Create New Module Object"
+    },
+    "Create onEnable Method in Module": {
+        "prefix": ["mod:onEnable", "module:onEnable", "m:onEnable"],
+        "body": [
+            "${1:module}:onEnable(function()",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Create onDisable Method in Module": {
+        "prefix": ["mod:onDisable", "module:onDisable", "m:onDisable"],
+        "body": [
+            "${1:module}:onDisable(function()",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Register Callback in Module": {
+        "prefix": ["mod:registerCallback", "module:registerCallback", "m:registerCallback"],
+        "body": [
+            "${1:module}:registerCallback({$2:callback},function()",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Register Event in Module": {
+        "prefix": ["mod:event", "module:event", "m:event"],
+        "body": [
+            "${1:module}:registerCallback(\"events\",function(event)",
+            "   if event:getName() == ${2:eventname} then",
+            "       ${0}",
+            "   end",
+            "end)"
+        ]
+    },
+    "Create new GuiBuilder Object": {
+        "prefix": "GuiBuilder",
+        "body": [
+            "GuiBuilder.new(${1:name})"
+        ]
+    },
+    "Create new GuiBuilder Object with Render":  {
+        "prefix": "GuiBuilderFull",
+        "body": [
+            "GuiBuilder.new(${1:name}):isPauseScreen(false):setRender(function(stack, cursor)",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Create setRender Method for GuiBuilder": {
+        "prefix": ["gui:render", "gui:setRender"],
+        "body": [
+            "${1:gui}:setRender(function(stack, cursor)",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Create setKeyPressed Method for GuiBuilder": {
+        "prefix": ["gui:keyPressed", "gui:setKeyPressed"],
+        "body": [
+            "${1:gui}:setKeyPressed(function(key, scan, modifiers)",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Create setKeyReleased Method for GuiBuilder": {
+        "prefix": ["gui:keyReleased", "gui:setKeyReleased"],
+        "body": [
+            "${1:gui}:setKeyReleased(function(key, scan, modifiers)",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Create setMouseClicked Method for GuiBuilder": {
+        "prefix": ["gui:mouseClicked", "gui:setMouseClicked"],
+        "body": [
+            "${1:gui}:setMouseClicked(function(cursor, button)",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Create setMouseReleased Method for GuiBuilder": {
+        "prefix": ["gui:mouseReleased", "gui:setMouseReleased"],
+        "body": [
+            "${1:gui}:setMouseReleased(function(cursor, button)",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Create setMouseScrolled Method for GuiBuilder": {
+        "prefix": ["gui:mouseScrolled", "gui:setMouseScrolled"],
+        "body": [
+            "${1:gui}:setMouseScrolled(function(cursor, amount)",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Create setCharTyped Method for GuiBuilder": {
+        "prefix": ["gui:charTyped", "gui:setCharTyped"],
+        "body": [
+            "${1:gui}:setCharTyped(function(chr, modifiers)",
+            "   ${0}",
+            "end)"
+        ]
+    },
+    "Build GuiBuilder Object": {
+        "prefix": "gui:build",
+        "body": [
+            "${1:gui}:build()"
+        ]
+    },
+    "Get FPS": {
+        "prefix": "globals:getFps",
+        "body": "globals:getFps()"
+    },
+    "Get Frametime": {
+        "prefix": "globals:getFrametime",
+        "body": "globals:getFrametime()"
+    },
+    "Get Current Time": {
+        "prefix": "globals:currentTime",
+        "body": "globals:currentTime()"
+    },
+    "Get Server": {
+        "prefix": "globals:getServer",
+        "body": "globals:getServer()"
+    },
+    "Get Username": {
+        "prefix": "globals:getUsername",
+        "body": "globals:getUsername()"
+    },
+    "Get TickMultiplier": {
+        "prefix": "globals:getTickMultiplier",
+        "body": "globals:getTickMultiplier()"
+    },
+    "Set TickMultiplier": {
+        "prefix": "globals:setTickMultiplier",
+        "body": "globals:setTickMultiplier(${1:ticks})"
+    },
+    "Get Entity List": {
+        "prefix": ["mc.world:getEntities", "globals:getEntities"],
+        "body": "globals:getEntities()"
+    },
+    "Create for-each loop for entities": {
+        "prefix": ["for-entity", "for-e"],
+        "body": [
+            "for j = 0, globals:getEntities():size() - 1 do",
+            "   local entity = globals:getEntities():get(j)",
+            "   ${0}",
+            "end"
+        ]
+    },
+    "Draw String Text": {
+        "prefix": "renderer:text",
+        "body": [
+            "renderer:text(${1:stack}, \"${2:text}\", vec2d(${3:x}, ${4:y}), ${5:color})"
+        ]
+    },
+    "Draw Text": {
+        "prefix": "renderer:text",
+        "body": [
+            "renderer:text(${1:stack}, textOf(\"${2:text}\"), vec2d(${3:x}, ${4:y}), ${5:color})"
+        ]
+    },
+    "Draw Shadow String Text": {
+        "prefix": "renderer:textWithShadow",
+        "body": [
+            "renderer:textWithShadow(${1:stack}, \"${2:text}\", vec2d(${3:x}, ${4:y}), ${5:color})"
+        ]
+    },
+    "Draw Shadow Text": {
+        "prefix": "renderer:textWithShadow",
+        "body": [
+            "renderer:textWithShadow(${1:stack}, textOf(\"${2:text}\"), vec2d(${3:x}, ${4:y}), ${5:color})"
+        ]
+    },
+    "Draw Outlined Rect": {
+        "prefix": "renderer:rect",
+        "body": [
+            "renderer:rect(${1:stack}, ${2:from}, ${3:to}, ${4:color})"
+        ]
+    },
+    "Draw Filled Rect": {
+        "prefix": "renderer:rectFilled",
+        "body": [
+            "renderer:rectFilled(${1:stack}, ${2:from}, ${3:to}, ${4:color})"
+        ]
+    },
+    "Draw Filled Rect with Fade": {
+        "prefix": "renderer:rectFilledFade",
+        "body": [
+            "renderer:rectFilled(${1:stack}, ${2:from}, ${3:to}, ${4:color1}, ${5:color2})"
+        ]
+    },
+    "Draw Line": {
+        "prefix": "renderer:line",
+        "body": [
+            "renderer:line(${1:stack}, ${2:from}, ${3:to}, ${4:color})"
+        ]
+    },
+    "Get String Text Width": {
+        "prefix": "renderer:width",
+        "body": [
+            "renderer:width(\"${1:text}\")"
+        ]
+    },
+    "Get Text Width": {
+        "prefix": "renderer:width",
+        "body": [
+            "renderer:width(textOf(\"${1:text}\"))"
+        ]
+    },
+    "Draw Filled 3d Box (Box)": {
+        "prefix": "renderer:drawBoxFilled",
+        "body": [
+            "renderer:drawBoxFilled(${1:stack}, ${2:box}, ${3:color})"
+        ]
+    },
+    "Draw Filled 3d Box (Vec3d)": {
+        "prefix": "renderer:drawBoxFilled",
+        "body": [
+            "renderer:drawBoxFilled(${1:stack}, ${2:vec3d}, ${3:color})"
+        ]
+    },
+    "Draw Filled 3d Box (BlockPos)": {
+        "prefix": "renderer:drawBoxFilled",
+        "body": [
+            "renderer:drawBoxFilled(${1:stack}, ${2:bp}, ${3:color})"
+        ]
+    },
+    "Draw Outlined 3d Box (Box)": {
+        "prefix": "renderer:drawBox",
+        "body": [
+            "renderer:drawBox(${1:stack}, ${2:box}, ${3:color}, ${4:lineWidth})"
+        ]
+    },
+    "Draw Outlined 3d Box (Vec3d)": {
+        "prefix": "renderer:drawBox",
+        "body": [
+            "renderer:drawBox(${1:stack}, ${2:vec3d}, ${3:color}, ${4:lineWidth})"
+        ]
+    },
+    "Draw Outlined 3d Box (BlockPos)": {
+        "prefix": "renderer:drawBox",
+        "body": [
+            "renderer:drawBox(${1:stack}, ${2:bp}, ${3:color}, ${4:lineWidth})"
+        ]
+    }
+
+}

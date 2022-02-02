@@ -1,0 +1,29 @@
+{
+    "name": "ferret-api",
+    "displayName": "Ferret API",
+    "description": "Code snippets for the Ferret Lua Scripting API",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cattyngmd/Ferret-Snippets"
+    },
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "keywords": [
+		"lua",
+		"ferret",
+        "minecraft"
+	],
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "lua",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
