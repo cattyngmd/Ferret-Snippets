@@ -460,6 +460,55 @@
         "body": [
             "local ${1:name} = ComboBuilder(${2:value}):name(${1:name}):setCombo(${3:values}):build(${4:feature})"
         ]
-    }
+    },
+    "Create Red Color Object": {
+        "prefix": ["color(red)", "cred"],
+        "body": "color(255, 0, 0, 255)"
+    },
+    "Create Dark Red Color Object": {
+        "prefix": ["color(darkred)", "cdarkred", "color(maroon), cmaroon"],
+        "body": "color(128, 0, 0, 255)"
+    },
+    "Create Green Color Object": {
+        "prefix": ["color(green)", "cgreen"],
+        "body": "color(0, 128, 0, 255)"
+    },
+    "Create Lime Color Object": {
+        "prefix": ["color(lime)", "clime"],
+        "body": "color(0, 255, 0, 255)"
+    },
+    "Create Blue Color Object": {
+        "prefix": ["color(blue)", "cblue"],
+        "body": "color(0, 255, 0, 255)"
+    },
+    "Create Dark Blue Color Object": {
+        "prefix": ["color(darkblue)", "cdarkblue", "color(navy), cnavy"],
+        "body": "color(0, 128, 0, 255)"
+    },
+    "Create Aqua Color Object": {
+        "prefix": ["color(aqua)", "caqua"],
+        "body": "color(0, 255, 255, 255)"
+    },
+    "Create Dark Aqua Color Object": {
+        "prefix": ["color(darkaqua)", "cdarkaqua", "color(teal)", "cteal"],
+        "body": "color(0, 128, 128, 255)"
+    },
+    "Create Yellow Color Object": {
+        "prefix": ["color(yellow)", "cyellow"],
+        "body": "color(255, 255, 0, 255)"
+    },
+    "Create Dark Yellow Color Object": {
+        "prefix": ["color(darkyellow)", "cdarkyellow", "color(olive)", "colive"],
+        "body": "color(128, 128, 0, 255)"
+    },
+
+    "Create Purle Color Object": {
+        "prefix": ["color(purple)", "cpurple"],
+        "body": "color(128, 0, 128, 255)"
+    },
+    "Create Pink Yellow Color Object": {
+        "prefix": ["color(pink)", "cpink"],
+        "body": "color(255, 0, 255, 255)"
+    },
 
 }
