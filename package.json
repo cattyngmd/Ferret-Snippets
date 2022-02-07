@@ -2,7 +2,7 @@
     "name": "ferret-api",
     "displayName": "Ferret API",
     "description": "Code snippets for the Ferret Lua Scripting API",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "Cattyn",
     "icon": "icon.png",
     "homepage": "https://cattyn.gitbook.io/ferret-lua-api/",
