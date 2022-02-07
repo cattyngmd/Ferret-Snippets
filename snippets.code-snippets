@@ -561,5 +561,53 @@
     "Walk Through Tree Files": {
         "prefix": "files:walkTree",
         "body": "files:walkTree(${1:path}, ${2:function})"
+    },
+    "Can break Block": {
+        "prefix": "interactions:canBreak",
+        "body": "interactions:canBreak(${1:pos}, ${2:state})"
+    },
+    "Is Block Position Placeable": {
+        "prefix": "interactions:isPlaceable",
+        "body": "interactions:isPlaceable(${1:pos}, ${2:entitycheck})"
+    },
+    "Break Block": {
+        "prefix": "insteractions:breakBlock",
+        "body": "interactions:breakBlock(${1:pos})"
+    },
+    "Use Item on Block": {
+        "prefix": "interactions:useItem",
+        "body": "interactions:useItem(${1:pos})"
+    },
+    "Use Item on Block With Custom Hand": {
+        "prefix": "interactions:useItem",
+        "body": "interactions:useItem(${1:pos}, ${2:hand})"
+    },
+    "Place Block": {
+        "prefix": "interactions:placeBlock",
+        "body": "interactions:placeBlock(${1:pos}, ${2:airplace})"
+    },
+    "Place Block With Custom Hand": {
+        "prefix": "interactions:placeBlock",
+        "body": "interactions:placeBlock(${1:pos}, ${2:airplace}, ${3:hand})"
+    },
+    "Calc Side": {
+        "prefix": "interactions:calcSide",
+        "body": "interactions:calcSide(${1:pos})"
+    },
+    "Get Block Breaking Speed": {
+        "prefix": "interactions:getBlockBreakingSpeed",
+        "body": "interactions:getBlockBreakingSpeed(${1:slot}, ${2:pos})"
+    },
+    "Get Block Breaking Speed With State": {
+        "prefix": "interactions:getBlockBreakingSpeed",
+        "body": "interactions:getBlockBreakingSpeed(${1:slot}, ${2:state})"
+    },
+    "Get Left Direction Side": {
+        "prefix": "interactions:left",
+        "body": "interactions:left(${1:direction})"
+    },
+    "Get Right Direction Side": {
+        "prefix": "interactions:right",
+        "body": "interactions:right(${1:direction})"
     }
 }
