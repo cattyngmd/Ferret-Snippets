@@ -509,6 +509,6 @@
     "Create Pink Yellow Color Object": {
         "prefix": ["color(pink)", "cpink"],
         "body": "color(255, 0, 255, 255)"
-    },
+    }
 
 }
