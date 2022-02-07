@@ -509,6 +509,57 @@
     "Create Pink Yellow Color Object": {
         "prefix": ["color(pink)", "cpink"],
         "body": "color(255, 0, 255, 255)"
+    },
+    "Create String Java Array": {
+        "prefix": "globals:toArrayS",
+        "body": "globals:toArrayS(${1:table})"
+    },
+    "Create Float Java Array": {
+        "prefix": "globals:toArrayF",
+        "body": "globals:toArrayF(${1:table})"
+    },
+    "Create Int Java Array": {
+        "prefix": "globals:toArrayI",
+        "body": "globals:toArrayI(${1:table})"
+    },
+    "Create File": {
+        "prefix": "files:createFile",
+        "body": "files:createFile(${1:path})"
+    },
+    "Create Dir": {
+        "prefix": "files:createDir",
+        "body": "files:createDir(${1:path})"
+    },
+    "Create Temp File": {
+        "prefix": "files:createTempFile",
+        "body": "files:createTempFile(${1:prefix}, ${2:suffix})"
+    },
+    "Create Temp Dir": {
+        "prefix": "files:createTempDir",
+        "body": "files:createTempFile(${1:dir})"
+    },
+    "Read File As Table": {
+        "prefix": "files:readFileAsTable",
+        "body": "files:readFileAsTable(${1:path})"
+    },
+    "Read File As String": {
+        "prefix": "files:readFile",
+        "body": "files:readFile(${1:path})"
+    },
+    "Write content to File": {
+        "prefix": "files:writeFile",
+        "body": "files:writeFile(${1:path}, ${2:content})"
+    },
+    "Write bytes to File": {
+        "prefix": "files:writeFile",
+        "body": "files:writeFile(${1:path}, ${2:bytes})"
+    },
+    "Walk Through Files": {
+        "prefix": "files:walk",
+        "body": "files:walk(${1:path}, ${2:function})"
+    },
+    "Walk Through Tree Files": {
+        "prefix": "files:walkTree",
+        "body": "files:walkTree(${1:path}, ${2:function})"
     }
-
 }
