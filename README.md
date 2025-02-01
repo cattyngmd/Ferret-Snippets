@@ -1,3 +1,3 @@
-# ferret-api README
+# Ferret Snippets
 
-yes
+Visual Studio Code plugin extension for Ferret
